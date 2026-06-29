@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: black;
+    font-family: 'Press Start 2P';
+}
+
+nav a {
+    color: white;
+    font-size: 12px;
+    position: relative;
+    text-decoration-line: none;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+.img-block {
+    width: 50px;
+    height: 50px;
+}
+
+nav li:hover .img-block {
+    animation: blockHit 0.3s ease;
+}
+
+@keyframes blockHit {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+nav li::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: -35px;
+    width: 28px;
+    height: 28px;
+    background-image: url('../img/coin.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+nav li:hover::before {
+    opacity: 1;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        top: -10px;
+    }
+
+    50% {
+        top: -25px;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(-70%);
+    }
+}
