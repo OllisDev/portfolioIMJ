@@ -1,0 +1,142 @@
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    padding: 3rem 0 2rem 0;
+}
+
+.site-footer {
+    width: 100%;
+    max-width: 1200px;
+    border-top: 3px solid #333;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer-brand {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.2s ease;
+    filter: brightness(1);
+}
+
+.social-icons a:hover {
+    transform: translateY(-8px);
+    filter: brightness(1.2);
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: filter 0.2s ease;
+}
+
+.social-icons a:hover img {
+    filter: drop-shadow(0 0 10px yellow);
+}
+
+.social-icons a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -35px;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 25px;
+    background-image: url('../img/coin.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover::before {
+    opacity: 1;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact-phone,
+.contact-mail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-phone img,
+.contact-mail img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0.9);
+    transition: filter 0.2s ease;
+}
+
+.contact-phone:hover img,
+.contact-mail:hover img {
+    filter: brightness(1.2) drop-shadow(0 0 8px yellow);
+}
+
+.contact-phone p,
+.contact-mail p {
+    color: white;
+    font-size: 10px;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    transition: color 0.2s ease;
+}
+
+.contact-phone:hover p,
+.contact-mail:hover p {
+    color: yellow;
+}
+
+@keyframes socialBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.social-icons a:active {
+    animation: socialBounce 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .footer-contact {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .contact-phone p,
+    .contact-mail p {
+        font-size: 8px;
+    }
+}
