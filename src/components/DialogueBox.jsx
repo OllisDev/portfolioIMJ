@@ -1,10 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import heartIcon from "../assets/img/undertale_heart.png";
 
-function DialogueBox({ text, speed = 50 }) {
+function DialogueBox({
+  text,
+  speed = 50,
+  shoOptionsButtons = true,
+  autoStart = false,
+}) {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isStarted, setIsStarted] = useState(false);
+  const [isStarted, setIsStarted] = useState(autoStart);
   const [showOptions, setShowOptions] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
   const [responseDialogue, setResponseDialogue] = useState("");
@@ -79,7 +84,7 @@ function DialogueBox({ text, speed = 50 }) {
 
     if (option === 0) {
       setTimeout(() => {
-        window.location.hash = "/proyectos";
+        window.location = "proyectos";
       }, 300);
     } else {
       const responses = [
@@ -103,6 +108,20 @@ function DialogueBox({ text, speed = 50 }) {
     }
   };
 
+  // Agregar este useEffect para manejar ENTER en el estado inicial
+  useEffect(() => {
+    if (isStarted) return; // Solo activo cuando NO ha empezado
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Enter") {
+        handleStart();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isStarted]);
+
   useEffect(() => {
     if (isStarted && currentIndex < text.length && !showResponse) {
       const timeout = setTimeout(() => {
@@ -120,11 +139,20 @@ function DialogueBox({ text, speed = 50 }) {
       currentIndex >= text.length &&
       isStarted &&
       !showOptions &&
-      !showResponse
+      !showResponse &&
+      shoOptionsButtons
     ) {
       setTimeout(() => setShowOptions(true), 500);
     }
-  }, [currentIndex, text, speed, isStarted, showOptions, showResponse]);
+  }, [
+    currentIndex,
+    text,
+    speed,
+    isStarted,
+    showOptions,
+    showResponse,
+    shoOptionsButtons,
+  ]);
 
   useEffect(() => {
     if (!showOptions) return;
@@ -162,7 +190,7 @@ function DialogueBox({ text, speed = 50 }) {
               )}
             </p>
 
-            {showOptions && (
+            {showOptions && shoOptionsButtons && (
               <div className="dialogue-options">
                 <button
                   className={`option-button ${selectedOption === 0 ? "selected" : ""}`}

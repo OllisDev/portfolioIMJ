@@ -1,0 +1,34 @@
+.determination-container {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 230px;
+    z-index: 90;
+}
+
+.button-determination {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.button-determination:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.button-determination:active {
+    transform: scale(0.95);
+}
+
+.determination-gif {
+    width: 60px;
+    height: 60px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    display: block;
+}
