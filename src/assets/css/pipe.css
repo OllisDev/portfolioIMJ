@@ -1,0 +1,115 @@
+.pipe-container {
+    background: #000;
+    min-height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.warp-title {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.warp-title h1 {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.warp-pipe {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 0;
+}
+
+.pipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.pipe:hover {
+    transform: translateY(-10px);
+}
+
+.pipe::before {
+    content: attr(data-world);
+    position: absolute;
+    top: -50px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 3px 3px 0px #000;
+}
+
+.pipe h2 {
+    font-family: 'Press Start 2P', monospace;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+    max-width: 250px;
+    line-height: 1.6;
+    text-shadow: 2px 2px 0px #000;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.pipe:hover h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pipe button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.pipe img {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.8));
+    image-rendering: pixelated;
+    transition: filter 0.3s ease;
+}
+
+.pipe:hover img {
+    filter: drop-shadow(0 0 20px #6bdb6b) drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.8));
+}
+
+
+@media (max-width: 768px) {
+    .warp-pipe {
+        gap: 60px;
+    }
+
+    .pipe img {
+        width: 100px;
+    }
+
+    .warp-title h1 {
+        font-size: 14px;
+    }
+
+    .pipe h2 {
+        font-size: 10px;
+    }
+
+    .pipe::before {
+        font-size: 24px;
+        top: -40px;
+    }
+}

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Header() {
   return (
     <div className="header-container">
@@ -10,7 +12,7 @@ function Header() {
                 alt="Bloque"
                 className="img-block"
               ></img>
-              <a href="#">Inicio</a>
+              <Link to="/">Inicio</Link>
             </li>
 
             <li>
@@ -19,7 +21,7 @@ function Header() {
                 alt="Bloque"
                 className="img-block"
               ></img>
-              <a href="#">Proyectos</a>
+              <Link to="/proyectos">Proyectos</Link>
             </li>
 
             <li>
@@ -28,7 +30,7 @@ function Header() {
                 alt="Bloque"
                 className="img-block"
               ></img>
-              <a href="#">Sobre mí</a>
+              <Link to="/sobre-mi">Sobre mí</Link>
             </li>
 
             <li>
@@ -37,7 +39,7 @@ function Header() {
                 alt="Bloque"
                 className="img-block"
               ></img>
-              <a href="#">Contacto</a>
+              <Link to="/contacto">Contacto</Link>
             </li>
           </ul>
         </nav>
