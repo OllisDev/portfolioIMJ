@@ -1,7 +1,9 @@
 .pipe-container {
-    background: #000;
+    background: #000 url('../img/floor_mario.svg') repeat-x bottom;
+    background-size: auto 80px;
     min-height: auto;
     padding: 20px;
+    padding-bottom: 73px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,10 +38,6 @@
     position: relative;
     cursor: pointer;
     transition: transform 0.2s ease;
-}
-
-.pipe:hover {
-    transform: translateY(-10px);
 }
 
 .pipe::before {
@@ -84,10 +82,6 @@
     filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.8));
     image-rendering: pixelated;
     transition: filter 0.3s ease;
-}
-
-.pipe:hover img {
-    filter: drop-shadow(0 0 20px #6bdb6b) drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.8));
 }
 
 
