@@ -6,7 +6,7 @@ import { useState } from "react";
 
 function Index() {
   const [dialogueText, setDialogueText] = useState(
-    "* Iker Magro Juárez aparece. \n* Es un desarrollador fullstack. \n* Parace saber de Java, C#, HTML, CSS y JavaScript... \n* ¿Quieres ver sus proyectos?",
+    "* Iker Magro Juárez aparece. \n* Es un desarrollador Junior Full-Stack. \n* Parace tener conocimientos de Java, Python, PHP, HTML, CSS y JavaScript... \n* ¿Quieres ver sus proyectos?",
   );
 
   const [autoStart, setAutoStart] = useState(false);
