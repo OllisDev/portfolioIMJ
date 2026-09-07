@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "PixelCoinsLauncher",
+    "objective": "Desarrollar una aplicación de escritorio en JavaFX para gestionar una biblioteca de juegos, registrar sesiones de juego, ganar monedas virtuales en función del tiempo jugado y se acceda a una tienda interna.",
+    "description": "Aplicación de escritorio enfocada en la gestión personalizada de bibloteca de videojuegos mediante gamificación.",
+    "technologies": {
+        "programmingLanguage": ["Java", "CSS", "MySQL"],
+        "frameworks": ["JavaFX", "JUnit", "JNativeHook", "Jna", "TextFX", "MySQL-Connector"],
+        "tools": ["Visual Studio Code", "Launch4J", "Railway", "DBeaver", "Git", "GitHub"]
+    },
+    "problems": [
+      "Gestion de rutas y procesos: ejecutar juegos externos y controlar su ventana supuso retos de compatibilidad y sincronización",
+      "Validaciones y mensajes de error: se dedicó tiempo a asegurar que los mensajes fueran claros y útiles para el usuario.",
+      "Pruebas de interfaz: automatizar pruebas en JavaFX requirió investigar yadaptar el uso de TestFX."
+    ],
+    "target": "Aquellas personas que quieren llevar un registro de tiempo jugado de una sesión de juego en cada juego y jugadores que les gustaría ganar recompensas por solo jugar y tener un incentivo para jugar mientras ganas monedas para gastarlas en artículos más baratos que en las tiendas convencionales.",
+    "result": "El desarrollo de este software me ha permitido desarrollar y afianzar conocimientos sobre JavaFx de las que antes no conocía, por ejemplo el uso de CSS para aplicar estilos a los componentes de mi aplicación, también es importante mencionar que he aprendido el uso de herramientas como Maven para poder trabajar de manera más eficiente el proyecto mediante los módulos y dependencias del proyecto y he aprendido a preparar un despliegue real de una aplicación de escritorio con JavaFX gracias a herramientas como Maven y Launch4j.",
+    "url": "https://github.com/OllisDev/OllisProyect-JavaFX",
+    "demoVideo": "videos/demo_pixelcoins.mp4"
+  },
+  {
+    "id": 2,
+    "title": "ConectaFP",
+    "objective": "Implementar una aplicación web que permita al alumno de Formación Profesional explorar y solicitar prácticas en empresas de manera sencilla y rápida.",
+    "description": "Aplicación web diseñada para conectar alumnos de Formación Profesional en España con empresas que ofrecen prácticas.",
+    "technologies": {
+        "programmingLanguage": ["PHP", "CSS", "MySQL"],
+        "frameworks": ["Laravel", "React", "laravel-spanish-validator"],
+        "tools": ["Visual Studio Code", "Git", "Github"]
+    },
+    "problems": [
+      "Validaciones y mensajes de error: se ha dedicado tiempo a asegurar que los mensajes fueran claros y útiles para el usuario.",
+      "Comandos: se ha dedicado tiempo a entender y a comprender el uso de los comandos durante el proyecto.",
+      "Modelo entidad-relación: se ha dedicado el tiempo a pensar el modelo entidad relación para que fuera comprensible y coherente."
+    ],
+    "target": "Aquellos alumnos que necesitan encontrar prácticas en empresas que las permitan hacer de manera rápida y sencilla.",
+    "result": "El desarrollo de este proyecto me ha permitido adquirir conocimientos más avanzados de Laravel que antes no conocía, por ejemplo la integración con componentes React. Es importante mencionar que he aprendido a utilizar de mejor manera los contenedores Docker para utilizar los comandos de manera correcta.",
+    "url": "https://github.com/OllisDev/conectaFP",
+    "demoVideo": "videos/demo_conectafp.mp4"
+  }
+]

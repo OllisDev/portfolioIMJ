@@ -1,5 +1,6 @@
 import { useState } from "react";
 import pipeImg from "../assets/img/pipe_mario.svg";
+import projectsData from "../data/projects.json";
 import pipeSoundFile from "../assets/sounds/mario_pipe.mp3";
 import ProjectModal from "./ProjectModal";
 import "../assets/css/projectModal.css";
@@ -10,30 +11,11 @@ const playPipeSound = () => {
   audio.play();
 };
 
+const projects = projectsData;
+
 function Pipe() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const projects = [
-    {
-      id: 1,
-      title: "PixelCoinsLauncher",
-      description:
-        "Aplicación de escritorio enfocada en la gestión personalizada de colecciones de videojuegos, orientada a mejorar la experiencia del usuario mediante la gamificación.Desarrollado en JavaFX (Java).",
-      url: "https://github.com/OllisDev/OllisProyect-JavaFX",
-      img: pipeImg,
-      demoVideo: "videos/demo_pixelcoins.mp4",
-    },
-    {
-      id: 2,
-      title: "ConectaFP",
-      description:
-        "Plataforma web diseñada para conectar a estudiantes de Formación Profesional con empresas y centros educativos, facilitando la búsqueda de prácticas y empleo. Desarrollado en Laravel (PHP).",
-      url: "https://github.com/OllisDev/conectaFP",
-      img: pipeImg,
-      demoVideo: "videos/demo_conectafp.mp4",
-    },
-  ];
 
   const handlePipeClick = (project) => {
     playPipeSound();
@@ -62,7 +44,7 @@ function Pipe() {
                 handlePipeClick(p);
               }}
             >
-              <img src={p.img} alt="Tubería" />
+              <img src={pipeImg} alt={p.title} />
             </button>
           </div>
         ))}
