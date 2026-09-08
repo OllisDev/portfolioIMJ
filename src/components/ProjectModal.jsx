@@ -78,6 +78,17 @@ function ProjectModal({ project, isOpen, onClose }) {
           >
             Ver en GitHub
           </a>
+
+          {project.documentation && (
+            <a
+              href={`/${project.documentation}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="modal-button"
+            >
+              Ver documentación
+            </a>
+          )}
         </div>
       </div>
     </div>

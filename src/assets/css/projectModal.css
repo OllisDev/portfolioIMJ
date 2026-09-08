@@ -148,6 +148,7 @@
 .modal-actions {
     display: flex;
     justify-content: center;
+    gap: 12px;
     margin-top: 18px;
 }
 
@@ -188,5 +189,10 @@
     .modal-section li,
     .modal-description {
         font-size: 8px;
+    }
+
+    .modal-actions {
+        flex-wrap: wrap;
+        gap: 10px;
     }
 }
