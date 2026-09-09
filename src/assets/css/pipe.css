@@ -1,18 +1,31 @@
+.projects-page {
+    height: 100vh;
+    overflow: hidden;
+}
+
+
 .pipe-container {
-    background: #000 url('../img/floor_mario.svg') repeat-x bottom;
-    background-size: auto 80px;
-    min-height: auto;
-    padding: 20px;
-    padding-bottom: 73px;
+    min-height: calc(100vh - 120px);
+    padding: 20px 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
+}
+
+.pipe-container {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    padding-bottom: 80px;
 }
 
 .warp-title {
-    margin-bottom: 30px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .warp-title h1 {
@@ -27,7 +40,8 @@
     align-items: flex-end;
     gap: 100px;
     flex-wrap: wrap;
-    margin-top: 50px;
+    width: 100%;
+    margin-top: auto;
     padding-bottom: 0;
 }
 
@@ -35,9 +49,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    justify-content: flex-end;
+    margin-top: auto;
+    margin-bottom: 0;
     cursor: pointer;
-    transition: transform 0.2s ease;
 }
 
 .pipe::before {
@@ -77,11 +92,12 @@
 }
 
 .pipe img {
-    width: 120px;
+    display: block;
+    width: 150px;
     height: auto;
+    margin-bottom: 0;
     filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.8));
     image-rendering: pixelated;
-    transition: filter 0.3s ease;
 }
 
 
