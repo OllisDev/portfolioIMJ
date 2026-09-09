@@ -39,15 +39,6 @@ function Header() {
                 alt="Bloque"
                 className="img-block"
               ></img>
-              <Link to="/habilidades">Habilidades</Link>
-            </li>
-
-            <li>
-              <img
-                src="src/assets/img/block.svg"
-                alt="Bloque"
-                className="img-block"
-              ></img>
               <Link to="/contacto">Contacto</Link>
             </li>
           </ul>
