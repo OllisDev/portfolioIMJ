@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import Index from "./Index.jsx";
 import Projects from "./Projects.jsx";
 import AboutMe from "./AboutMe.jsx";
+import Contact from "./Contact.jsx";
 import "./assets/css/header.css";
 import "./assets/css/footer.css";
 import "./assets/css/dialogueBox.css";
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<Index />}></Route>
         <Route path="/proyectos" element={<Projects />}></Route>
         <Route path="/sobre-mi" element={<AboutMe />}></Route>
+        <Route path="/contacto" element={<Contact />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

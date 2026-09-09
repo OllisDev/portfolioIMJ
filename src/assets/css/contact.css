@@ -1,0 +1,162 @@
+.contact-page {
+    min-height: calc(100vh - 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 0;
+    background: #000;
+}
+
+.contact-panel {
+    width: min(900px, 90%);
+    background: #111;
+    border: 5px solid #fff;
+    box-shadow:
+        inset 0 0 0 4px #000,
+        inset 0 0 0 8px #fff,
+        0 0 0 4px #000;
+    padding: 36px 28px;
+    text-align: center;
+}
+
+.contact-label {
+    font-family: 'Press Start 2P', monospace;
+    color: #09ff00;
+    font-size: 10px;
+    margin: 0 0 18px;
+    letter-spacing: 2px;
+}
+
+.contact-title {
+    font-family: 'Press Start 2P', monospace;
+    color: #fff;
+    font-size: clamp(20px, 4vw, 32px);
+    margin: 0 0 26px;
+    line-height: 1.5;
+}
+
+.contact-text {
+    font-family: 'Press Start 2P', monospace;
+    color: #fff;
+    font-size: 10px;
+    line-height: 2;
+    max-width: 700px;
+    margin: 0 auto 28px;
+}
+
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.contact-card {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    position: relative;
+    gap: 12px;
+}
+
+.contact-card::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 3px solid #fff;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.contact-link {
+    font-family: 'Press Start 2P', monospace;
+    color: #fff;
+    font-size: 8px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+.contact-link:hover {
+    color: #7df9ff;
+}
+
+.contact-icon-wrap {
+    position: relative;
+    z-index: 1;
+    width: 62px;
+    height: 62px;
+    background: #111;
+    border: 3px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        inset 0 0 0 3px #000,
+        inset 0 0 0 6px #fff;
+    transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.contact-icon-wrap:hover {
+    background: #1a1a1a;
+    transform: translate(-2px, -2px);
+    box-shadow:
+        inset 0 0 0 3px #000,
+        inset 0 0 0 6px #fff,
+        4px 4px 0 #000;
+}
+
+.contact-icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+    filter: brightness(1);
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.contact-icon-wrap:hover .contact-icon {
+    transform: scale(1.08);
+    filter: brightness(1.2);
+}
+
+.contact-key {
+    position: relative;
+    z-index: 1;
+    font-family: 'Press Start 2P', monospace;
+    color: #7df9ff;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contact-card a {
+    position: relative;
+    z-index: 1;
+    font-family: 'Press Start 2P', monospace;
+    color: #fff;
+    font-size: 8px;
+    text-decoration: none;
+    line-height: 1.8;
+    word-break: break-word;
+}
+
+.contact-card a:hover {
+    color: #7df9ff;
+}
+
+@media (max-width: 768px) {
+    .contact-list {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card a,
+    .contact-text,
+    .contact-key {
+        font-size: 7px;
+    }
+}
