@@ -1,4 +1,3 @@
-import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./assets/css/aboutMe.css";
 import avatar from "./assets/img/Iker_Magro_Juarez.jpeg";
@@ -119,8 +118,6 @@ function AboutMe() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   );
 }
