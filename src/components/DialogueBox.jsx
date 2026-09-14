@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import heartIcon from "../assets/img/undertale_heart.png";
 
 function DialogueBox({
@@ -7,6 +8,7 @@ function DialogueBox({
   shoOptionsButtons = true,
   autoStart = false,
 }) {
+  const navigate = useNavigate();
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isStarted, setIsStarted] = useState(autoStart);
@@ -84,7 +86,7 @@ function DialogueBox({
 
     if (option === 0) {
       setTimeout(() => {
-        window.location = "proyectos";
+        navigate("/proyectos");
       }, 300);
     } else {
       const responses = [
