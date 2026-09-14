@@ -2,24 +2,38 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import DialogueBox from "./components/DialogueBox";
 import Determination from "./components/Determination";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+
+const defaultDialogueText =
+  "* Iker Magro Juárez aparece. \n* Es un desarrollador Junior Full-Stack. \n* Parace tener conocimientos de Java, Python, PHP, HTML, CSS y JavaScript... \n* ¿Quieres ver sus proyectos?";
 
 function Index() {
-  const [dialogueText, setDialogueText] = useState(
-    "* Iker Magro Juárez aparece. \n* Es un desarrollador Junior Full-Stack. \n* Parace tener conocimientos de Java, Python, PHP, HTML, CSS y JavaScript... \n* ¿Quieres ver sus proyectos?",
-  );
-
+  const [dialogueText, setDialogueText] = useState(defaultDialogueText);
   const [autoStart, setAutoStart] = useState(false);
+  const timeoutRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleDeterminationClick = (message) => {
     setDialogueText(message);
     setAutoStart(true);
 
-    setTimeout(() => {
-      setDialogueText(dialogueText);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    timeoutRef.current = setTimeout(() => {
+      setDialogueText(defaultDialogueText);
       setAutoStart(false);
     }, 10000);
   };
+
   return (
     <>
       <Header />
