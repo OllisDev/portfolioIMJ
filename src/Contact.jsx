@@ -22,44 +22,46 @@ function Contact() {
           </p>
 
           <section className="contact-list">
-            <div className="contact-card">
+            <a
+              className="contact-card"
+              href="mailto:imagrojuarez@gmail.com"
+              aria-label="Enviar un correo a imagrojuarez@gmail.com"
+            >
               <div className="contact-icon-wrap">
-                <a href="mailto:imagrojuarez@gmail.com">
-                  <img src={EmailIcon} alt="Email" className="contact-icon" />
-                </a>
+                <img src={EmailIcon} alt="Email" className="contact-icon" />
               </div>
-              <a className="contact-link">imagrojuarez@gmail.com</a>
-            </div>
+              <span className="contact-link">imagrojuarez@gmail.com</span>
+            </a>
 
-            <div className="contact-card">
+            <a
+              className="contact-card"
+              href="https://github.com/OllisDev"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ir al perfil de GitHub de Iker"
+            >
               <div className="contact-icon-wrap">
-                <a
-                  href="https://github.com/OllisDev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={GitHubIcon} alt="GitHub" className="contact-icon" />
-                </a>
+                <img src={GitHubIcon} alt="GitHub" className="contact-icon" />
               </div>
-              <a className="contact-link">github.com/OllisDev</a>
-            </div>
+              <span className="contact-link">github.com/OllisDev</span>
+            </a>
 
-            <div className="contact-card">
+            <a
+              className="contact-card"
+              href="https://www.linkedin.com/in/iker-magro-ju%C3%A1rez-641602341/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ir al perfil de LinkedIn de Iker"
+            >
               <div className="contact-icon-wrap">
-                <a
-                  href="https://www.linkedin.com/in/iker-magro-ju%C3%A1rez-641602341/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={LinkedInIcon}
-                    alt="LinkedIn"
-                    className="contact-icon"
-                  />
-                </a>
+                <img
+                  src={LinkedInIcon}
+                  alt="LinkedIn"
+                  className="contact-icon"
+                />
               </div>
-              <a className="contact-link">Iker Magro Juárez</a>
-            </div>
+              <span className="contact-link">Iker Magro Juárez</span>
+            </a>
           </section>
         </section>
       </main>

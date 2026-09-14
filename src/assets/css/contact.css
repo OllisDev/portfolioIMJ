@@ -51,17 +51,18 @@
 }
 
 .contact-card {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 0;
     display: flex;
+    position: relative;
+    z-index: 1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 180px;
     position: relative;
     gap: 12px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .contact-card::before {
@@ -73,7 +74,8 @@
 }
 
 .contact-link {
-    font-family: 'Press Start 2P', monospace;
+    display: block;
+    font-family: "Press Start 2P", monospace;
     color: #fff;
     font-size: 8px;
     text-decoration: none;
@@ -134,20 +136,15 @@
     text-transform: uppercase;
 }
 
-.contact-card a {
-    position: relative;
-    z-index: 1;
-    font-family: 'Press Start 2P', monospace;
-    color: #fff;
-    font-size: 8px;
-    text-decoration: none;
-    line-height: 1.8;
-    word-break: break-word;
+.contact-card:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.08);
 }
 
-.contact-card a:hover {
+.contact-card:hover .contact-link {
     color: #7df9ff;
 }
+
 
 @media (max-width: 768px) {
     .contact-list {

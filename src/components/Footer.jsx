@@ -7,48 +7,46 @@ function Footer() {
   return (
     <div className="footer-container">
       <footer className="site-footer">
-        <div className="footer-brand">
+        <div className="footer-brand" aria-label="Redes sociales">
           <nav className="social-icons">
-            <a href="https://www.linkedin.com/in/iker-magro-ju%C3%A1rez-641602341/">
-              <img
-                src={iconLinkedin}
-                alt="Linkedin"
-                target="_blank"
-                rel="noopener noreferrer"
-              ></img>
+            <a
+              href="https://www.linkedin.com/in/iker-magro-ju%C3%A1rez-641602341/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn de Iker Magro Juárez"
+            >
+              <img src={iconLinkedin} alt="Linkedin" />
             </a>
 
-            <a href="https://github.com/OllisDev">
-              <img
-                src={iconGithub}
-                alt="GitHub"
-                target="_blank"
-                rel="noopener noreferrer"
-              ></img>
+            <a
+              href="https://github.com/OllisDev"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub de Iker Magro Juárez"
+            >
+              <img src={iconGithub} alt="GitHub" />
             </a>
           </nav>
         </div>
 
         <div className="footer-contact">
-          <div className="contact-phone">
-            <img
-              src={iconPhone}
-              alt="Telefono"
-              target="_blank"
-              rel="noopener noreferrer"
-            ></img>
-            <p>661 15 39 89</p>
-          </div>
+          <a
+            className="contact-phone"
+            href="tel:+34661153989"
+            aria-label="Llamar por teléfono"
+          >
+            <img src={iconPhone} alt="Teléfono" />
+            <span>661 15 39 89</span>
+          </a>
 
-          <div className="contact-mail">
-            <img
-              src={iconMail}
-              alt="Correo Electrónico"
-              target="_blank"
-              rel="noopener noreferrer"
-            ></img>
-            <p>imagrojuarez@gmail.com</p>
-          </div>
+          <a
+            className="contact-mail"
+            href="mailto:imagrojuarez@gmail.com"
+            aria-label="Enviar correo electrónico"
+          >
+            <img src={iconMail} alt="Correo electrónico" />
+            <span>imagrojuarez@gmail.com</span>
+          </a>
         </div>
       </footer>
     </div>
