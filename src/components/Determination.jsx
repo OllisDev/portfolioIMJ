@@ -1,4 +1,5 @@
 import saveSound from "../assets/sounds/undertale_save.mp3";
+import gifDetermination from "../assets/img/determination.gif";
 
 function Determination({ onDeterminationClick }) {
   const message =
@@ -26,10 +27,7 @@ function Determination({ onDeterminationClick }) {
         className="button-determination"
         onClick={handleClick}
       >
-        <img
-          src="/src/assets/img/determination.gif"
-          className="determination-gif"
-        ></img>
+        <img src={gifDetermination} className="determination-gif"></img>
       </button>
     </div>
   );

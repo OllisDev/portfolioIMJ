@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import "./assets/css/contact.css";
-import GitHub from "./assets/img/github_icon.svg";
+import GitHubIcon from "./assets/img/github_icon.svg";
 import EmailIcon from "./assets/img/mail_icon.svg";
 import LinkedInIcon from "./assets/img/linkedin_icon.svg";
 
@@ -38,7 +38,7 @@ function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={GitHub} alt="GitHub" className="contact-icon" />
+                  <img src={GitHubIcon} alt="GitHub" className="contact-icon" />
                 </a>
               </div>
               <a className="contact-link">github.com/OllisDev</a>
