@@ -41,7 +41,7 @@ function Contact() {
                   <img src={GitHub} alt="GitHub" className="contact-icon" />
                 </a>
               </div>
-              <a className="contact-link">github/OllisDev</a>
+              <a className="contact-link">github.com/OllisDev</a>
             </div>
 
             <div className="contact-card">
