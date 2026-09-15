@@ -1,7 +1,6 @@
 import Header from "./components/Header";
 import "./assets/css/aboutMe.css";
 import avatar from "./assets/img/Iker_Magro_Juarez.jpeg";
-import docResume from "../public/doc/Curriculum_Iker_Magro_Juárez.pdf";
 
 function AboutMe() {
   return (
@@ -102,7 +101,12 @@ function AboutMe() {
           </section>
 
           <div className="trainer-actions">
-            <a href={docResume} className="trainer-button">
+            <a
+              href="/doc/Curriculum_Iker_Magro_Juárez.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="trainer-button"
+            >
               Ver CV
             </a>
             <a
