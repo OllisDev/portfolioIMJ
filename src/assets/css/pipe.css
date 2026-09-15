@@ -5,16 +5,6 @@
 
 .pipe-container {
     min-height: calc(100vh - 120px);
-    padding: 20px 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-}
-
-.pipe-container {
-    min-height: calc(100vh - 120px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -23,14 +13,37 @@
 }
 
 .warp-title {
-    margin-top: 35px;
-    margin-bottom: 20px;
+    width: min(760px, 100%);
+    margin: 100px auto 20px;
+    text-align: center;
+}
+
+.projects-eyebrow {
+    margin: 0 0 18px;
+    color: #7df9ff;
+    font-family: "Press Start 2P", monospace;
+    font-size: 9px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .warp-title h1 {
+    margin: 0;
     color: #fff;
-    font-size: 20px;
-    text-align: center;
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(20px, 4vw, 32px);
+    line-height: 1.5;
+    text-shadow: 4px 4px 0 #222;
+}
+
+.projects-description {
+    max-width: 620px;
+    margin: 18px auto 0;
+    color: #cfcfcf;
+    font-family: "Press Start 2P", monospace;
+    font-size: 9px;
+    line-height: 2;
 }
 
 .warp-pipe {
@@ -109,8 +122,17 @@
         width: 100px;
     }
 
+    .projects-eyebrow {
+        font-size: 7px;
+    }
+
     .warp-title h1 {
-        font-size: 14px;
+        font-size: 18px;
+    }
+
+    .projects-description {
+        font-size: 7px;
+        line-height: 2.1;
     }
 
     .pipe h2 {

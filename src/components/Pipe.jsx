@@ -31,7 +31,11 @@ function Pipe() {
   return (
     <div className="pipe-container">
       <div className="warp-title">
-        <h1>¡BIENVENIDO AL PROJECT ZONE!</h1>
+        <p className="projects-eyebrow">¡BIENVENIDO AL PROJECT ZONE!</p>
+        <h1>MIS PROYECTOS</h1>
+        <p className="projects-description">
+          Aplicaciones desarrolladas con Java, PHP, React y otras tecnologías
+        </p>
       </div>
 
       <div className="warp-pipe">
