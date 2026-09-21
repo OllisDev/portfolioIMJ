@@ -27,7 +27,11 @@ function Determination({ onDeterminationClick }) {
         className="button-determination"
         onClick={handleClick}
       >
-        <img src={gifDetermination} className="determination-gif"></img>
+        <img
+          src={gifDetermination}
+          className="determination-gif"
+          alt="Mostrar mensaje de determinación"
+        ></img>
       </button>
     </div>
   );

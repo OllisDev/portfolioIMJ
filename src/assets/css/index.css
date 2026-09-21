@@ -1,19 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
+html,
+body,
 #root {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
 }
 
 body {
     background-color: black;
     font-family: 'Press Start 2P';
+}
+
+.home-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .home-page {
+        height: 100svh;
+        overflow: hidden;
+    }
+
+    .footer-container {
+        padding: 1rem;
+    }
+
+    .site-footer {
+        padding-top: 1rem;
+        gap: 1rem;
+    }
 }

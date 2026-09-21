@@ -5,7 +5,7 @@ import Determination from "./components/Determination";
 import { useState, useRef, useEffect } from "react";
 
 const defaultDialogueText =
-  "* Iker Magro Juárez aparece. \n* Es un desarrollador Junior Full-Stack. \n* Parace tener conocimientos de Java, Python, PHP, HTML, CSS y JavaScript... \n* ¿Quieres ver sus proyectos?";
+  "* Iker Magro Juárez aparece. \n* Es un desarrollador Junior Full-Stack. \n* Parece tener conocimientos de Java, Python, PHP, HTML, CSS y JavaScript... \n* ¿Quieres ver sus proyectos?";
 
 function Index() {
   const [dialogueText, setDialogueText] = useState(defaultDialogueText);
@@ -36,16 +36,18 @@ function Index() {
 
   return (
     <>
-      <Header />
-      <DialogueBox
-        key={dialogueText}
-        text={dialogueText}
-        speed={50}
-        shoOptionsButtons={!autoStart}
-        autoStart={autoStart}
-      />
-      <Determination onDeterminationClick={handleDeterminationClick} />
-      <Footer />
+      <main className="home-page">
+        <Header />
+        <DialogueBox
+          key={dialogueText}
+          text={dialogueText}
+          speed={50}
+          showOptionsButtons={!autoStart}
+          autoStart={autoStart}
+        />
+        <Determination onDeterminationClick={handleDeterminationClick} />
+        <Footer />
+      </main>
     </>
   );
 }

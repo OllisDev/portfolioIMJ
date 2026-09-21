@@ -152,52 +152,102 @@
 
 @media (max-width: 600px) {
     .trainer-page {
-        padding: 30px 14px;
+        width: 100%;
+        min-height: calc(100svh - 80px);
+        padding: 24px 10px;
+        overflow-x: hidden;
     }
 
     .trainer-card {
-        padding: 18px;
-        border-width: 5px;
+        width: 100%;
+        max-width: 100%;
+        padding: 14px;
+        border-width: 4px;
+        box-shadow:
+            4px 4px 0 #000000,
+            inset 0 0 0 2px #dbeafe;
     }
 
     .trainer-header {
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
+        gap: 14px;
+        padding-bottom: 18px;
+        text-align: center;
+    }
+
+    .trainer-avatar {
+        width: 76px;
+        height: 76px;
+        border-width: 4px;
+    }
+
+    .trainer-label {
+        margin-bottom: 8px;
+        font-size: 8px;
+        line-height: 1.6;
     }
 
     .trainer-header h1 {
-        font-size: 15px;
+        font-size: 13px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+
+    .trainer-class {
+        font-size: 8px;
+        line-height: 1.7;
     }
 
     .trainer-info {
         grid-template-columns: 1fr;
-        font-size: 8px;
+        gap: 8px;
+        margin: 16px 0;
+        padding: 10px;
+        border-width: 3px;
+        font-size: 7px;
+        line-height: 1.8;
     }
 
     .trainer-section {
-        padding: 14px;
+        margin-top: 16px;
+        padding: 10px;
+        border-width: 3px;
     }
 
     .trainer-section h2 {
-        font-size: 11px;
+        margin-bottom: 10px;
+        font-size: 9px;
+        line-height: 1.6;
     }
 
     .trainer-section p {
-        font-size: 8px;
-        line-height: 2;
+        font-size: 7px;
+        line-height: 1.9;
+        overflow-wrap: anywhere;
+    }
+
+    .skill-list {
+        gap: 6px;
     }
 
     .skill-list span {
-        font-size: 8px;
+        padding: 7px;
+        font-size: 7px;
+        line-height: 1.5;
     }
 
     .trainer-actions {
         align-items: stretch;
         flex-direction: column;
+        gap: 10px;
+        margin-top: 18px;
     }
 
     .trainer-button {
+        padding: 11px 8px;
+        font-size: 7px;
+        line-height: 1.5;
         text-align: center;
-        font-size: 8px;
     }
 }

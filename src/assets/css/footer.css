@@ -142,15 +142,92 @@
     animation: socialBounce 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+    .footer-container {
+        padding: 2rem 1rem 1.5rem;
+    }
+
+    .site-footer {
+        padding: 1.5rem 1rem 0;
+        gap: 1.5rem;
+    }
+
+    .social-icons {
+        gap: 1.5rem;
+    }
+
+    .social-icons img {
+        width: 36px;
+        height: 36px;
+    }
+
     .footer-contact {
         flex-direction: column;
-        gap: 1.5rem;
         align-items: center;
+        gap: 1.25rem;
+    }
+
+    .contact-phone,
+    .contact-mail {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .contact-phone span,
+    .contact-mail span {
+        font-size: 8px;
+        overflow-wrap: anywhere;
+        text-align: center;
+    }
+
+    .contact-phone img,
+    .contact-mail img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .social-icons a,
+    .social-icons a:hover,
+    .social-icons a:active {
+        transform: none;
+        filter: none;
+        animation: none;
+        transition: none;
+    }
+
+    .social-icons a:hover img,
+    .social-icons a:active img {
+        filter: none;
+    }
+
+    .social-icons a::before {
+        display: none;
+    }
+
+    .contact-phone,
+    .contact-mail,
+    .contact-phone:hover,
+    .contact-mail:hover,
+    .contact-phone:active,
+    .contact-mail:active {
+        transform: none;
+        color: white;
+        filter: none;
+        transition: none;
+    }
+
+    .contact-phone:hover img,
+    .contact-mail:hover img,
+    .contact-phone:active img,
+    .contact-mail:active img {
+        filter: none;
     }
 
     .contact-phone p,
-    .contact-mail p {
-        font-size: 8px;
+    .contact-mail p,
+    .contact-phone:hover p,
+    .contact-mail:hover p {
+        color: white;
+        transition: none;
     }
 }

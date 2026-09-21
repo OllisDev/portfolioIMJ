@@ -32,3 +32,27 @@
     image-rendering: crisp-edges;
     display: block;
 }
+
+@media (max-width: 600px) {
+    .determination-container {
+        top: auto;
+        bottom: clamp(10rem, 24vh, 12rem);
+        margin-top: 0;
+        transform: translateX(-50%);
+    }
+
+    .determination-gif {
+        width: clamp(42px, 14vw, 60px);
+        height: auto;
+    }
+
+    .button-determination:hover,
+    .button-determination:active {
+        transform: none;
+        filter: none;
+    }
+
+    .button-determination {
+        transition: none;
+    }
+}

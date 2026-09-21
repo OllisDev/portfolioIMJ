@@ -145,15 +145,73 @@
     color: #7df9ff;
 }
 
-
-@media (max-width: 768px) {
-    .contact-list {
-        grid-template-columns: 1fr;
+@media (max-width: 600px) {
+    .contact-page {
+        min-height: calc(100svh - 80px);
+        padding: 24px 10px;
+        overflow-x: hidden;
     }
 
-    .contact-card a,
-    .contact-text,
-    .contact-key {
+    .contact-panel {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        padding: 22px 12px;
+        border-width: 4px;
+    }
+
+    .contact-label {
+        font-size: 8px;
+        line-height: 1.6;
+        letter-spacing: 1px;
+    }
+
+    .contact-title {
+        font-size: clamp(18px, 8vw, 26px);
+        line-height: 1.5;
+    }
+
+    .contact-text {
+        font-size: 8px;
+        line-height: 1.9;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .contact-card {
+        min-height: 130px;
+        gap: 10px;
+    }
+
+    .contact-card::before {
+        inset: 6px;
+    }
+
+    .contact-icon-wrap {
+        width: 52px;
+        height: 52px;
+    }
+
+    .contact-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .contact-link {
+        max-width: 100%;
+        padding: 0 12px;
         font-size: 7px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-card:hover,
+    .contact-icon-wrap:hover {
+        transform: none;
+        filter: none;
     }
 }

@@ -5,7 +5,7 @@ import heartIcon from "../assets/img/undertale_heart.png";
 function DialogueBox({
   text,
   speed = 50,
-  shoOptionsButtons = true,
+  showOptionsButtons = true,
   autoStart = false,
 }) {
   const navigate = useNavigate();
@@ -142,7 +142,7 @@ function DialogueBox({
       isStarted &&
       !showOptions &&
       !showResponse &&
-      shoOptionsButtons
+      showOptionsButtons
     ) {
       setTimeout(() => setShowOptions(true), 500);
     }
@@ -153,7 +153,7 @@ function DialogueBox({
     isStarted,
     showOptions,
     showResponse,
-    shoOptionsButtons,
+    showOptionsButtons,
   ]);
 
   useEffect(() => {
@@ -192,7 +192,7 @@ function DialogueBox({
               )}
             </p>
 
-            {showOptions && shoOptionsButtons && (
+            {showOptions && showOptionsButtons && (
               <div className="dialogue-options">
                 <button
                   className={`option-button ${selectedOption === 0 ? "selected" : ""}`}
