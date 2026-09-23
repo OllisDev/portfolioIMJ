@@ -23,28 +23,28 @@ function Header() {
         <nav>
           <ul className={isOpen ? "is-open" : ""}>
             <li>
-              <img src={imgBlock} alt="Bloque" className="img-block"></img>
+              <img src={imgBlock} alt="" className="img-block"></img>
               <Link to="/" onClick={closeMenu}>
                 Inicio
               </Link>
             </li>
 
             <li>
-              <img src={imgBlock} alt="Bloque" className="img-block"></img>
+              <img src={imgBlock} alt="" className="img-block"></img>
               <Link to="/proyectos" onClick={closeMenu}>
                 Proyectos
               </Link>
             </li>
 
             <li>
-              <img src={imgBlock} alt="Bloque" className="img-block"></img>
+              <img src={imgBlock} alt="" className="img-block"></img>
               <Link to="/sobre-mi" onClick={closeMenu}>
                 Sobre mí
               </Link>
             </li>
 
             <li>
-              <img src={imgBlock} alt="Bloque" className="img-block"></img>
+              <img src={imgBlock} alt="" className="img-block"></img>
               <Link to="/contacto" onClick={closeMenu}>
                 Contacto
               </Link>
