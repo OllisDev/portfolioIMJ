@@ -179,7 +179,8 @@ function DialogueBox({
 
         {!isStarted ? (
           <button onClick={handleStart} className="start-dialogue-button">
-            [ Presiona ENTER ]
+            <span className="desktop-text">[ Presiona ENTER ]</span>
+            <span className="mobile-text">[ Pulsa aquí ]</span>
           </button>
         ) : showResponse ? (
           <p className="dialogue-text">{responseDialogue}</p>
