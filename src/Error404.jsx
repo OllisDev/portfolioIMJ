@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import imgError from "./assets/img/error404.svg";
 import "./assets/css/error404.css";
+import { Link } from "react-router-dom";
 
 function Error404() {
   return (
@@ -10,7 +11,10 @@ function Error404() {
       <div className="error-404-container">
         <img src={imgError} alt="Página no encontrada"></img>
         <h1>ERROR 404</h1>
-        <span>No se ha encontrado esa página</span>
+        <span>Página no encontrada</span>
+        <a>
+          <Link to="/">Pulsa aquí para volver al Inicio</Link>
+        </a>
       </div>
     </>
   );

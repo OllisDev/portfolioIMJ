@@ -33,6 +33,17 @@
     line-height: 2;
 }
 
+.error-404-container a {
+    margin-top: 25px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.error-404-container a:hover {
+    color: aqua;
+}
+
 @keyframes errorFloat {
 
     0%,
@@ -63,12 +74,17 @@
 
     .error-404-container span {
         max-width: 300px;
-        font-size: 8px;
+        font-size: 9px;
         line-height: 1.8;
     }
 
     .error-404-container::after {
         max-width: 280px;
         font-size: 7px;
+    }
+
+    .error-404-container a {
+        max-width: 500px;
+        font-size: 10px;
     }
 }
