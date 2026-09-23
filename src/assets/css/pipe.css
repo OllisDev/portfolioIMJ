@@ -26,7 +26,7 @@
     margin: 0 0 18px;
     color: #7df9ff;
     font-family: "Press Start 2P", monospace;
-    font-size: 9px;
+    font-size: 12px;
     line-height: 1.8;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -43,10 +43,17 @@
 
 .projects-description {
     max-width: 620px;
-    margin: 18px auto 0;
+    margin: 20px auto 0;
     color: #cfcfcf;
     font-family: "Press Start 2P", monospace;
-    font-size: 9px;
+    font-size: 11px;
+    line-height: 2;
+}
+
+.projects-indication {
+    color: aqua;
+    margin: 55px auto 0;
+    font-size: 11px;
     line-height: 2;
 }
 
@@ -143,7 +150,7 @@
 
     .projects-eyebrow {
         margin-bottom: 0.5rem;
-        font-size: 6px;
+        font-size: 8px;
     }
 
     .warp-title h1 {
@@ -152,8 +159,14 @@
 
     .projects-description {
         margin-top: 0.75rem;
-        font-size: 6px;
+        font-size: 8px;
         line-height: 1.6;
+    }
+
+    .projects-indication {
+        margin: 75px auto 0;
+        font-size: 10px;
+        line-height: 2;
     }
 
     .warp-pipe {

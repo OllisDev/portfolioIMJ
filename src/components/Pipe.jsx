@@ -36,6 +36,9 @@ function Pipe() {
         <p className="projects-description">
           Aplicaciones desarrolladas con Java, PHP, React y otras tecnologías
         </p>
+        <p className="projects-indication">
+          Pulsa una tubería para ver los detalles del proyecto seleccionado
+        </p>
       </div>
 
       <div className="warp-pipe">
