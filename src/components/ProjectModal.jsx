@@ -1,4 +1,22 @@
+import { useEffect } from "react";
+
 function ProjectModal({ project, isOpen, onClose }) {
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
   if (!isOpen || !project) return null;
 
   const tech = project.technologies || {};
@@ -8,7 +26,7 @@ function ProjectModal({ project, isOpen, onClose }) {
   const problems = project.problems || [];
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
+    <div className="modal-overlay" onClick={onClose} role="dialog" aria-modal>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button
           className="modal-close"
