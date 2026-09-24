@@ -1,9 +1,26 @@
 import { useEffect } from "react";
 
+/**
+ * Modal que muestra la información detallada de un proyecto
+ *
+ * Permite cerrar el modal haciendo clic fuera de su contenido,
+ * pulsando el botón de cierre o presionando la tecla Escape
+ *
+ * @param {Object} props Propiedades del componente
+ * @param {Object|null} props.project Proyecto que se mostrará
+ * @param {boolean} props.isOpen Indica si el modal está abierto
+ * @param {Function} props.onClose Función encargada de cerrar el modal
+ * @returns {JSX.Element|null} Modal con los datos del proyecto
+ */
 function ProjectModal({ project, isOpen, onClose }) {
+  /**
+   * Escucha la tecla Escape mientras el modal está abierto
+   */
   useEffect(() => {
+    // no registra el evento si el modal está cerrado
     if (!isOpen) return;
 
+    // cierra el modal al pulsar Escape
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
         onClose();
@@ -12,17 +29,24 @@ function ProjectModal({ project, isOpen, onClose }) {
 
     window.addEventListener("keydown", handleKeyDown);
 
+    // elimina el evento cuando el modal se cierra o se desmonta
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isOpen, onClose]);
 
+  // no muestra nada si el modal está cerrado o no hay proyecto seleccionado
   if (!isOpen || !project) return null;
 
+  // obtiene las tecnologías del proyecto o utiliza objetos vacíos
   const tech = project.technologies || {};
+
+  // obtiene cada categoría tecnológica o utiliza arrays vacíos
   const languages = tech.programmingLanguage || [];
   const frameworks = tech.frameworks || [];
   const tools = tech.tools || [];
+
+  // obtiene los problemas encontrados durante el proyecto
   const problems = project.problems || [];
 
   return (

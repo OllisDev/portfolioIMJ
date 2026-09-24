@@ -5,24 +5,44 @@ import pipeSoundFile from "../assets/sounds/mario_pipe.mp3";
 import ProjectModal from "./ProjectModal";
 import "../assets/css/projectModal.css";
 
+/**
+ * Reproduce el sonido de la tubería
+ */
 const playPipeSound = () => {
   const audio = new Audio(pipeSoundFile);
   audio.volume = 0.5;
   audio.play();
 };
 
+// lista de proyectos obtenida del archivo JSON
 const projects = projectsData;
 
+/**
+ * Componente que muestra los proyectos disponibles mediante tuberías interactivas
+ *
+ * Al pulsar una tubería, se reproduce un sonido y se abre un modal con la información del proyecto seleccionado
+ *
+ * @returns {JSX.Element} Zona de proyectos con sus tuberías
+ */
 function Pipe() {
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null); // proyecto seleccionado actualmente
+  const [isModalOpen, setIsModalOpen] = useState(false); // controla si el modal esta abierto o cerrado
 
+  /**
+   * Gestiona la selección de un proyecto.
+   *
+   * @param {Object} project Proyecto seleccionado
+   */
   const handlePipeClick = (project) => {
     playPipeSound();
     setSelectedProject(project);
     setIsModalOpen(true);
   };
 
+  /**
+   * Cierra el modal y elimina el proyecto seleccionado
+   * después de finalizar la animación de cierre
+   */
   const closeModal = () => {
     setIsModalOpen(false);
     setTimeout(() => setSelectedProject(null), 300);

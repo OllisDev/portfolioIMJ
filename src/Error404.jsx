@@ -3,6 +3,11 @@ import imgError from "./assets/img/error404.svg";
 import "./assets/css/error404.css";
 import { Link } from "react-router-dom";
 
+/**
+ * Componente principal de la página de Error 404
+ *
+ * @returns {JSX.Element}
+ */
 function Error404() {
   return (
     <>

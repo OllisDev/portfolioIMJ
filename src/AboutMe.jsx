@@ -2,6 +2,11 @@ import Header from "./components/Header";
 import "./assets/css/aboutMe.css";
 import avatar from "./assets/img/Iker_Magro_Juarez.jpeg";
 
+/**
+ * Componente principal de la página de Sobre mí
+ *
+ * @returns {JSX.Element}
+ */
 function AboutMe() {
   return (
     <>

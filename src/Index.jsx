@@ -4,14 +4,24 @@ import DialogueBox from "./components/DialogueBox";
 import Determination from "./components/Determination";
 import { useState, useRef, useEffect } from "react";
 
+// texto inicial que aparece en la caja de diálogo
 const defaultDialogueText =
   "* Iker Magro Juárez aparece. \n* Es un desarrollador Junior Full-Stack. \n* Parece tener conocimientos de Java, Python, PHP, HTML, CSS y JavaScript... \n* ¿Quieres ver sus proyectos?";
 
+/**
+ * Componente principal de la página de Inicio
+ * @returns {JSX.Element} Estructura de la página de inicio
+ */
 function Index() {
   const [dialogueText, setDialogueText] = useState(defaultDialogueText);
   const [autoStart, setAutoStart] = useState(false);
   const timeoutRef = useRef(null);
 
+  /**
+   * limpia el temporizador al desmontar el componente
+   *
+   * @returns {void}
+   */
   useEffect(() => {
     return () => {
       if (timeoutRef.current) {
@@ -20,6 +30,12 @@ function Index() {
     };
   }, []);
 
+  /**
+   * Muestra un nuevo mensaje y recupera el texto inicial
+   *
+   * @param {string} message Mensaje que se mostrará en el diálogo
+   * @returns {void}
+   */
   const handleDeterminationClick = (message) => {
     setDialogueText(message);
     setAutoStart(true);

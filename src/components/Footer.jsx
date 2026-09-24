@@ -3,6 +3,11 @@ import iconGithub from "../assets/img/github_icon.svg";
 import iconPhone from "../assets/img/phone_icon.svg";
 import iconMail from "../assets/img/mail_icon.svg";
 
+/**
+ * Componente del pie de página
+ *
+ * @returns {JSX.Element} Pie de página
+ */
 function Footer() {
   return (
     <div className="footer-container">

@@ -4,6 +4,11 @@ import GitHubIcon from "./assets/img/github_icon.svg";
 import EmailIcon from "./assets/img/mail_icon.svg";
 import LinkedInIcon from "./assets/img/linkedin_icon.svg";
 
+/**
+ * Componente principal de la página de Contacto
+ *
+ * @returns {JSX.Element}
+ */
 function Contact() {
   return (
     <>

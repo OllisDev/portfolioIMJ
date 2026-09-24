@@ -2,6 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import imgBlock from "../assets/img/block.svg";
 
+/**
+ * Componente del encabezado de la página
+ *
+ * @returns {JSX.Element} Encabezado de la página
+ */
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
