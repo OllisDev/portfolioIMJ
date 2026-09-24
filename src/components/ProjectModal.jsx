@@ -49,6 +49,9 @@ function ProjectModal({ project, isOpen, onClose }) {
   // obtiene los problemas encontrados durante el proyecto
   const problems = project.problems || [];
 
+  const videoSrc = `${import.meta.env.BASE_URL}${project.demoVideo}`;
+  const docUrl = `${import.meta.env.BASE_URL}${project.documentation}`;
+
   return (
     <div className="modal-overlay" onClick={onClose} role="dialog" aria-modal>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -142,7 +145,7 @@ function ProjectModal({ project, isOpen, onClose }) {
           <div className="modal-video-wrapper">
             <div className="modal-video">
               <video controls autoPlay loop muted className="demo-video">
-                <source src={project.demoVideo} type="video/mp4" />
+                <source src={videoSrc} type="video/mp4" />
                 Tu navegador no soporta videos HTML5.
               </video>
             </div>
@@ -161,7 +164,7 @@ function ProjectModal({ project, isOpen, onClose }) {
 
           {project.documentation && (
             <a
-              href={`/${project.documentation}`}
+              href={docUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="modal-button"

@@ -107,7 +107,7 @@ function AboutMe() {
 
           <div className="trainer-actions">
             <a
-              href="/doc/Curriculum_Iker_Magro_Juárez.pdf"
+              href={`${import.meta.env.BASE_URL}doc/Curriculum_Iker_Magro_Juárez.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="trainer-button"
