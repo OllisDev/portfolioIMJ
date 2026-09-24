@@ -1,16 +1,109 @@
-# React + Vite
+# Portfolio personal | Iker Magro Juárez
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personal desarrollado con React + Vite para mostrar información profesional, proyectos, experiencia y medios de contacto.
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este proyecto es un portfolio personal diseñado para presentar:
 
-## React Compiler
+- Perfil profesional
+- Proyectos desarrollados
+- Experiencia y formación
+- Información de contacto
+- Enlaces a redes sociales y repositorios
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+La web está pensada para una presentación visual y moderna, con un estilo inspirador en videojuegos retro y una navegación clara entre secciones.
 
-## Expanding the ESLint configuration
+## Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- React Router DOM
+- CSS modular / estilos en archivos CSS
+- GitHub Pages para despliegue
+
+## Requisitos previos
+
+Antes de ejecutar el proyecto, asegúrate de tener instalado:
+
+- Node.js 18 o superior
+- npm o pnpm
+
+## Instalación
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/portfolioIMJ.git
+cd portfolioIMJ
+```
+2. Instala las dependencias:
+```bash
+npm install
+```
+3. Inicia el proyecto en modo desarrollo:
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en el puerto por defecto de Vite, normalmente:
+```
+http://localhost:5173
+```
+
+## Scripts disponibles
+En el proyecto puedes ejecutar:
+```bash
+npm run dev
+```
+Levanta el servidor de desarrollo:
+```bash
+npm run build
+```
+Genera la versión de producción:
+```bash
+npm run preview
+```
+Previsualiza la build generada:
+```
+npm run lint
+```
+
+## Estructura del proyecto
+```bash
+portfolioIMJ/
+├── public/
+│   ├── favicon.png
+│   ├── icons.svg
+│   ├── doc/
+│   └── videos/
+├── src/
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── img/
+│   │   └── sounds/
+│   ├── components/
+│   ├── data/
+│   ├── AboutMe.jsx
+│   ├── App.jsx
+│   ├── Contact.jsx
+│   ├── Error404.jsx
+│   ├── Index.jsx
+│   ├── Projects.jsx
+│   ├── main.jsx
+│   └── ...
+├── index.html
+├── package.json
+├── vite.config.js
+├── eslint.config.js
+├── README.md
+└── ...
+```
+
+## Autor
+Iker Magro Juárez (OllisDev)
+
+## Contacto
+- LinkedIn: https://www.linkedin.com/in/iker-magro-ju%C3%A1rez-641602341/
+- GitHub: https://github.com/OllisDev
+- Email: imagrojuarez@gmail.com
